@@ -1,3 +1,4 @@
+import os
 from flask import (Flask, g, render_template, flash, redirect, url_for,
                   abort)
 from flask.ext.bcrypt import check_password_hash
@@ -8,7 +9,7 @@ import forms
 import models
 
 DEBUG = True
-PORT = 8000
+PORT = 5000
 HOST = '0.0.0.0'
 
 app = Flask(__name__)
@@ -175,8 +176,8 @@ if __name__ == '__main__':
     try:
         models.User.create_user(
             username='bo0bie',
-            email='bouba2143@live.com',
-            password='niggy25',
+            email='test@test.com',
+            password='password',
             admin=True
         )
     except ValueError:
